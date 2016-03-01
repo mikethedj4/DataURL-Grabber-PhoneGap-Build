@@ -1,0 +1,38 @@
+body {
+  background: #3BAC69;
+}
+
+/* Main Styles */
+.grid, .call {
+  color: #d8d8d8;
+}
+.holder {
+  border: 10px dashed #d8d8d8;
+  margin: 20px auto;
+  padding: 1em 0;
+  text-align: center;
+}
+.call {
+  cursor: pointer;
+  /*text-decoration: underline;*/
+}
+.call:hover {
+  color: #fff;
+}
+
+/* Styles As Variables */
+.hide {
+  display: none;
+}
+.fill {
+  width: 100%;
+}
+.centa {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+.nomarb {
+  margin-bottom: 0;
+}
