@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html id="viewport">
   <head>
     <title>DataURL Grabber</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
     <script src="libraries/jquery/jquery.js"></script>
     <link rel="stylesheet" href="libraries/polyui/polyui.css">
     <link rel="stylesheet" href="libraries/font-awesome/font-awesome.css" />
@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="css/index.css" />
     <script src="cordova.js"></script>
   </head>
-  <body>
+  <body onresize="app.onResize()">
+    <div id="progressDialog" class="progressDialog hidden">
+      <div id="spinner"></div>
+      <span id="message">Loading ads...</span>
+    </div>
+    <a class="button" onclick="app.startBannerAds()">Start Banner Ads</a>
+
     <div class="grid">
       <div class="grid__col--12">
         <a class="block holder call" data-action="call">
@@ -34,6 +40,15 @@
       <input type="file" data-action="input">
     </div>
 
+    <script src="cordova.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/admob.js"></script>
+    <script>
+      app.initialize()
+
+      setTimeout(function() {
+        app.startBannerAds()
+      }, 1000)
+    </script>
   </body>
 </html>

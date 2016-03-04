@@ -36,3 +36,8 @@ body {
 .nomarb {
   margin-bottom: 0;
 }
+.progressDialog, .button {
+  position: absolute;
+  top : -1000px;
+  left: -1000px;
+}
